@@ -28,16 +28,14 @@ body{
 .user{
 	width:20px;
 }
-
 .box1{
 	border:1px solid transparent;
-	height:600px;
+	height:550px;
 	width:800px;
 	display:table-cell;
 	vertical-align:middle;
-	
+	margin-top:60px;
 }
-
 .ibox{
 	width:80px;
 }
@@ -49,11 +47,43 @@ body{
 	width:100px;
     	
 }
+
+.top_bar{
+	height:50px;
+	width:300px;
+	float:right;
+	/*background-color:orange;*/
+	margin-top:10px;
+}
+
+.top_img{
+	height:45px;
+	width:45px;
+	margin:2px;
+	margin-left:5px;
+	margin-right:5px;
+	float:left;
+}
+.main{
+  margin-top:60px;	
+}
+img.top_img:hover{
+	box-shadow: 2px 2px 2px 2px #6CBB3C;
+	border-radius: 50px;
+}
 </style>
 </head>
 <body>
 
 <div class="container">
+<div class="top_bar"> 
+ <a href="https://twitter.com/"> <img src="{% static 'twitter.png' %}" class="img-responsive top_img" title="Twitter" /> </a>
+ <a href="https://facebook.com"> <img src="{% static 'Facebook_Logo.png' %}" class="img-responsive top_img" title="Facebook" /> </a>
+ <a href="https://reddit.com"> <img src="{% static 'reddit.png' %}" class="img-responsive top_img" title="Reddit" /> </a>
+ <a href="https://youtube.com"> <img src="{% static 'youtube.png' %}" class="img-responsive top_img" title="You Tube" /> </a> 
+ <a href="#"> <img src="{% static 'about.png' %}" class="img-responsive top_img" style="float:rigth;margin-left:25px" title="About Us" /></a>
+</div>
+<div class="main">
  <center>
    <div class="box1">
      <center>
@@ -70,7 +100,7 @@ body{
  <div class="output">
    <p id="out"> </p>
  </div>
- 
+ </div>
 </div>
 </body>
 </html>

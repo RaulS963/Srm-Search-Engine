@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>search engine</title>
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+function func(){
+  var s = document.getElementById("uput").value;
+  var ss = s.split(" ");
+  var text="";
+  var i="";
+  for(i=0;i<ss.length;i++)
+  {
+    text+=ss[i] + "<br/>";
+  }
+  document.getElementById("out").innerHTML = text;  
+}
+</script>
+<style>
+body{
+	background-image:url("{% static 'about_srm1.jpg' %}");	
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+.user{
+	width:20px;
+}
+
+.box1{
+	border:1px solid transparent;
+	height:600px;
+	width:800px;
+	display:table-cell;
+	vertical-align:middle;
+	
+}
+
+.ibox{
+	width:80px;
+}
+
+.output{
+	border-radius:5px;
+	background-color:pink;
+	height:auto;
+	width:100px;
+    	
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+ <center>
+   <div class="box1">
+     <center>
+	   <div>
+	    
+		 <img src="{% static 'logo1.png' %}" class="img-responsive" style="heigth:90px;width:120px" /><br/>
+	     <input type="text" class="form-control" style="width:80%;" id="uput" autofocus value="" /> &nbsp &nbsp <br/>
+		 <button class="btn btn-success" onclick="func()"> <span class="glyphicon glyphicon-search"> </span> &nbsp search </button>
+	   	 
+	  </div>
+     </center>
+  </div>	   	
+ </center>
+ <div class="output">
+   <p id="out"> </p>
+ </div>
+ 
+</div>
+</body>
+</html>
